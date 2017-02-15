@@ -8,7 +8,7 @@ class Apartment extends Model
         'apt_floornumber',
         'apt_number',
         'apt_comments',
-        'cntr_id',
+        'cntr_name',
     ];
     public function aptres() {
         return $this->hasMany('App\aptres');
@@ -19,4 +19,9 @@ class Apartment extends Model
     public function center() {
         return $this->belongsTo('App\center');
     }
+    public function residents() {
+        return $this->belongsTo('App\Resident','apt_id');
+
+    }
+
 }

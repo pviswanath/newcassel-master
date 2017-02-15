@@ -24,15 +24,17 @@
     <table class="table table-striped table-bordered table-hover">--}}
         <thead>
         <tr class="bg-info">
+            <th>Center Name</th>
+            <th>APT No</th>
             <th>Resident Id</th>
             <th>PCCID</th>
-            <th>APT No</th>
+
             <th>First Name</th>
             <th>Middle Name</th>
             <th>Last Name</th>
             <th>Gender</th>
             <th>Phone</th>
-            {{--<th>Cellphone</th>--}}
+           <th>Cellphone</th>
             <th>Email</th>
             <th>Comment</th>
             <th>Status</th>
@@ -53,15 +55,17 @@
         </script>
         @foreach ($createres as $createres)
             <tr>
+                <td>{{ $createres->  cntr_name }}</td>
+                <td>{{ $createres->  apt_id }}</td>
                 <td>{{ $createres-> id }}</td>
                 <td>{{ $createres-> res_pccid }}</td>
-                <td>{{ $createres-> apt_id }}</td>
+
                 <td>{{ $createres-> res_fname }}</td>
                 <td>{{ $createres-> res_mname }}</td>
                 <td>{{ $createres-> res_lname }}</td>
                 <td>{{ $createres-> res_gender }}</td>
                 <td>{{ $createres-> res_phone }}</td>
-                {{--<td>{{ $createres-> res_cellphone }}</td>--}}
+             <td>{{ $createres-> res_cellphone }}</td>
                 <td>{{ $createres-> res_email }}</td>
                 <td>{{ $createres-> res_comment }}</td>
                 <td>{{ $createres-> res_status }}</td>

@@ -17,10 +17,10 @@
     <div class="form-group">
         {!! Form::label('id', '*Res ID:') !!}
         {!! Form::text('id',null,['class'=>'form-control']) !!}
-        <div class="form-group">
+       {{-- <div class="form-group">
             {!! Form::label('apt_id', 'APT No:') !!}
             {!! Form::text('apt_id',null,['class'=>'form-control']) !!}
-        </div>
+        </div>--}}
         <div class="form-group">
             {!! Form::label('res_pccid', '*PCCID:') !!}
             {!! Form::text('res_pccid',null,['class'=>'form-control']) !!}

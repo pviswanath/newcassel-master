@@ -29,6 +29,7 @@ class Resident extends Model
         'id',
         'res_pccid',
         'apt_id',
+        'cntr_name',
         'res_fname',
         'res_mname',
         'res_lname',
@@ -42,6 +43,11 @@ class Resident extends Model
 
     public function resident() {
 
+    }
+
+    public function apartments()
+    {
+        return $this->hasMany('App\Apartment','id');
     }
 
 }

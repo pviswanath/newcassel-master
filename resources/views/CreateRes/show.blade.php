@@ -16,8 +16,12 @@
                 <td><?php echo ($post['res_pccid']); ?></td>
             </tr>
             <tr>
-                <td>Apt No</td>
+                <td>Apartment No</td>
                 <td><?php echo ($post['apt_id']); ?></td>
+            </tr>
+            <tr>
+                <td>Center Name</td>
+                <td><?php echo ($post['cntr_name']); ?></td>
             </tr>
             <tr>
                 <td>First Name </td>

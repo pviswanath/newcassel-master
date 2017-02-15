@@ -7,6 +7,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
+
                     <div class="panel-heading" > Create New Resident</div>
                     <div class="panel-body">
 
@@ -31,17 +32,28 @@
 
                                 </div>
                         </div>
-                        </br> </br>
+                        </br> </br></br>
                             <div class="form-group ">
                                 {!! Form::label('apt_id', '*APT No:',['class' => 'col-md-4 control-label']) !!}
                                 <div class="col-md-4">
-                                    {!! Form::text('apt_id',null,['class' => 'col-md-2 form-control','required' => 'required']) !!}
+
+                                  {!! Form::select('apt_id', $apartment,['class' => 'col-md-2 form-control','required' => 'required']) !!}
+                                    {{--{!! Form::text('apt_id',null,['class' => 'col-md-2 form-control','required' => 'required']) !!}--}}
 
 
                                 </div>
                             </div>
                             </br> </br>
-
+                            <div class="form-group">
+                                {!! Form::Label('cntr_name', '*Center Name:',['class' => 'col-md-4 control-label']) !!}
+                                <div class="col-md-4">
+                                {!! Form::select('cntr_name', [
+                                                '' => '',
+                                            'Omaha' => 'Omaha',
+                                            'Other' => 'Other'], old('cntr_name'), ['class' => 'form-control']) !!}
+                                    </div>
+                            </div>
+                            </br> </br>
 
                         <div class="form-group">
                                 {!! Form::label('res_fname', '*First Name:',['class' => 'col-md-4 control-label']) !!}
@@ -103,18 +115,18 @@
                             </div>
                     </br></br>
 
-                    {{--<div class="form-group ">
+                 <div class="form-group ">
                         {!! Form::label('res_cellphone', 'Cellphone:',['class' => 'col-md-4 control-label']) !!}
                         <div class="col-md-4">
                             {!! Form::text('res_cellphone',null,['class'=>'col-md-2 form-control']) !!}
-                           --}}{{-- @if ($errors->has('res_phone'))
+                          {{-- @if ($errors->has('res_phone'))
                                 <span class="help-block">
                 <strong>{{ $errors->first('res_cellphone') }}</strong>
             </span>
-                            @endif--}}{{--
+                            @endif--}}
                         </div>
-                    </div>--}}
-                    {{--</br></br>--}}
+                    </div>
+                   </br></br>
                     <div class="form-group ">
                         {!! Form::label('res_email', 'Email:',['class' => 'col-md-4 control-label']) !!}
                         <div class="col-md-4">
@@ -155,7 +167,8 @@
                             {!! Form::submit('Save', ['class' => 'btn btn-success form-control']) !!}
                             {{--{!! Form::button('<i class="fa fa-btn fa-save"></i>Save', ['type' => 'submit', 'class' => 'btn btn-success']) !!}--}}
                         </div>
-                    </div>
+                        </div>
+
                 </div>
             </div>
         </div>
